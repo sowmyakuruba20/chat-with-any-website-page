@@ -63,16 +63,17 @@ def get_response(user_input):
     
     response = conversation_rag_chain.invoke({
         "chat_history": st.session_state.chat_history,
-        "input": user_query
+        "input": user_input  # Change 'user_query' to 'user_input'
     })
     
     return response['answer']
 
+
 # app config
 
 #setting up page title and icon
-st.set_page_config(page_title="Chat with websites", page_icon="🤖")
-st.title("Chat with websites")
+st.set_page_config(page_title="Chat with Websites", page_icon="🤖")
+st.title("Chat with Websites 🤖")
 
 # sidebar
 with st.sidebar:
